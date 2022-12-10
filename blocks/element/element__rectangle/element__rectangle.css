@@ -1,0 +1,8 @@
+.element__rectangle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  align-items: center;
+  margin: 23px 15px 31px 21px;
+  height: 23px;
+}

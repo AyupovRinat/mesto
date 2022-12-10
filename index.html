@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./page/index.css">
+</head>
+
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="./images/logo.png" alt="логотип">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img src="./images/jak.png" alt="кусто" class="profile__avatar">
+      <div class="profile__info">
+        <div class="profile__container">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="profile__info-button"></button>
+        </div>
+        <h2 class="profile__post">Исследователь океана</h2>
+      </div>
+      <button type="button" class="profile__add-button"></button>
+    </section>
+
+    <section class="elements">
+      <article class="element">
+        <img src="./images/Россия.jpg" alt="горы Россия" class="element__image">
+        <div class="element__rectangle">
+          <p class="element__title">Россия</p>
+          <button type="button" class="element__button"></button>
+        </div>
+      </article>
+      <article class="element">
+        <img src="./images/Индонезия.jpg" alt="вулкан Индонезии" class="element__image">
+        <div class="element__rectangle">
+          <p class="element__title">Индонезия</p>
+          <button type="button" class="element__button"></button>
+        </div>
+      </article>
+      <article class="element">
+        <img src="./images/Ирландия.jpg" alt="берег Ирландии" class="element__image">
+        <div class="element__rectangle">
+          <p class="element__title">Ирландия</p>
+          <button type="button" class="element__button"></button>
+        </div>
+      </article>
+      <article class="element">
+        <img src="./images/Исландия.jpg" alt="горы Исландии" class="element__image">
+        <div class="element__rectangle">
+          <p class="element__title">Исландия</p>
+          <button type="button" class="element__button"></button>
+        </div>
+      </article>
+      <article class="element">
+        <img src="./images/Австрия.jpg" alt="горы Австрии" class="element__image">
+        <div class="element__rectangle">
+          <p class="element__title">Австрия</p>
+          <button type="button" class="element__button"></button>
+        </div>
+      </article>
+      <article class="element">
+        <img src="./images/Франция.jpg" alt="гора Франция" class="element__image">
+        <div class="element__rectangle">
+          <p class="element__title">Франция</p>
+          <button type="button" class="element__button"></button>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+  </footer>
+
+  <div class="popup">
+    <form class="popup__container">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <input type="text" value="Жак-Ив Кусто" class="popup__field popup__name">
+      <input type="text" value="Исследователь океана" class="popup__field popup__post">
+      <button class="popup__close-button"></button>
+      <button type="submit" class="popup__button">Сохранить</button>
+    </form>
+  </div>
+  <script src="./script/index.js"></script>
+</body>
+
+</html>
