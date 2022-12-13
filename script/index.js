@@ -9,6 +9,8 @@ let profilePost = document.querySelector('.profile__post');
 
 function openedPopup() {
   popup.classList.add('popup_opened');
+  nameInput.value = profileName.textContent;
+  postInput.value = profilePost.textContent;
 }
 
 function closePopup() {
