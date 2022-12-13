@@ -1,9 +1,9 @@
 let popup = document.querySelector('.popup');
 let addButton = document.querySelector('.profile__info-button');
 let closeButton = document.querySelector('.popup__close-button');
-let formElement = document.querySelector('.popup__container');
-let nameInput = formElement.querySelector('.popup__name');
-let postInput = formElement.querySelector('.popup__post');
+let formElement = document.querySelector('.popup__form');
+let nameInput = formElement.querySelector('.popup__form_text_name');
+let postInput = formElement.querySelector('.popup__form_text_post');
 let profileName = document.querySelector('.profile__name');
 let profilePost = document.querySelector('.profile__post');
 

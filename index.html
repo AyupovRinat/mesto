@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./page/index.css">
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
   <header class="header">
-    <img class="header__logo" src="./images/logo.png" alt="логотип">
+    <img class="header__logo" src="./images/logo.svg" alt="логотип">
   </header>
   <main class="content">
     <section class="profile">
@@ -18,54 +18,54 @@
       <div class="profile__info">
         <div class="profile__container">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__info-button"></button>
+          <button type="button" class="profile__info-button" aria-label="добавить описание"></button>
         </div>
         <h2 class="profile__post">Исследователь океана</h2>
       </div>
-      <button type="button" class="profile__add-button"></button>
+      <button type="button" class="profile__add-button" aria-label="добавить"></button>
     </section>
 
     <section class="elements">
       <article class="element">
-        <img src="./images/Россия.jpg" alt="горы Россия" class="element__image">
+        <img class="element__image" src="./images/russia.jpg" alt="горы Россия">
         <div class="element__rectangle">
-          <p class="element__title">Россия</p>
-          <button type="button" class="element__button"></button>
+          <h2 class="element__title">Россия</h2>
+          <button type="button" class="element__button" aria-label="лайк"></button>
         </div>
       </article>
       <article class="element">
-        <img src="./images/Индонезия.jpg" alt="вулкан Индонезии" class="element__image">
+        <img class="element__image" src="./images/indonezia.jpg" alt="вулкан Индонезии">
         <div class="element__rectangle">
-          <p class="element__title">Индонезия</p>
-          <button type="button" class="element__button"></button>
+          <h2 class="element__title">Индонезия</h2>
+          <button type="button" class="element__button" aria-label="лайк"></button>
         </div>
       </article>
       <article class="element">
-        <img src="./images/Ирландия.jpg" alt="берег Ирландии" class="element__image">
+        <img class="element__image" src="./images/ireland.jpg" alt="берег Ирландии">
         <div class="element__rectangle">
-          <p class="element__title">Ирландия</p>
-          <button type="button" class="element__button"></button>
+          <h2 class="element__title">Ирландия</h2>
+          <button type="button" class="element__button" aria-label="лайк"></button>
         </div>
       </article>
       <article class="element">
-        <img src="./images/Исландия.jpg" alt="горы Исландии" class="element__image">
+        <img class="element__image" src="./images/island.jpg" alt="горы Исландии">
         <div class="element__rectangle">
-          <p class="element__title">Исландия</p>
-          <button type="button" class="element__button"></button>
+          <h2 class="element__title">Исландия</h2>
+          <button type="button" class="element__button" aria-label="лайк"></button>
         </div>
       </article>
       <article class="element">
-        <img src="./images/Австрия.jpg" alt="горы Австрии" class="element__image">
+        <img class="element__image" src="./images/austria.jpg" alt="горы Австрии">
         <div class="element__rectangle">
-          <p class="element__title">Австрия</p>
-          <button type="button" class="element__button"></button>
+          <h2 class="element__title">Австрия</h2>
+          <button type="button" class="element__button" aria-label="лайк"></button>
         </div>
       </article>
       <article class="element">
-        <img src="./images/Франция.jpg" alt="гора Франция" class="element__image">
+        <img class="element__image" src="./images/france.jpg" alt="гора Франция">
         <div class="element__rectangle">
-          <p class="element__title">Франция</p>
-          <button type="button" class="element__button"></button>
+          <h2 class="element__title">Франция</h2>
+          <button type="button" class="element__button" aria-label="лайк"></button>
         </div>
       </article>
     </section>
@@ -75,13 +75,15 @@
   </footer>
 
   <div class="popup">
-    <form class="popup__container">
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <input type="text" value="Жак-Ив Кусто" class="popup__field popup__name">
-      <input type="text" value="Исследователь океана" class="popup__field popup__post">
-      <button class="popup__close-button"></button>
-      <button type="submit" class="popup__button">Сохранить</button>
-    </form>
+    <div class="popup__container">
+      <form class="popup__form" name="form1">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input type="text" name="fullname" value="Жак-Ив Кусто" class="popup__field popup__form_text_name">
+        <input type="text" name="post" value="Исследователь океан" class="popup__field popup__form_text_post">
+        <button type="submit" class="popup__button">Сохранить</button>
+      </form>
+      <button type="button" class="popup__close-button" aria-label="закрыть"></button>
+    </div>
   </div>
   <script src="./script/index.js"></script>
 </body>
