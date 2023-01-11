@@ -25,66 +25,60 @@
       <button type="button" class="profile__add-button" aria-label="добавить"></button>
     </section>
 
-    <section class="elements">
-      <article class="element">
-        <img class="element__image" src="./images/russia.jpg" alt="горы Россия">
-        <div class="element__rectangle">
-          <h2 class="element__title">Россия</h2>
-          <button type="button" class="element__button" aria-label="лайк"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="./images/indonezia.jpg" alt="вулкан Индонезии">
-        <div class="element__rectangle">
-          <h2 class="element__title">Индонезия</h2>
-          <button type="button" class="element__button" aria-label="лайк"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="./images/ireland.jpg" alt="берег Ирландии">
-        <div class="element__rectangle">
-          <h2 class="element__title">Ирландия</h2>
-          <button type="button" class="element__button" aria-label="лайк"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="./images/island.jpg" alt="горы Исландии">
-        <div class="element__rectangle">
-          <h2 class="element__title">Исландия</h2>
-          <button type="button" class="element__button" aria-label="лайк"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="./images/austria.jpg" alt="горы Австрии">
-        <div class="element__rectangle">
-          <h2 class="element__title">Австрия</h2>
-          <button type="button" class="element__button" aria-label="лайк"></button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="./images/france.jpg" alt="гора Франция">
-        <div class="element__rectangle">
-          <h2 class="element__title">Франция</h2>
-          <button type="button" class="element__button" aria-label="лайк"></button>
-        </div>
-      </article>
-    </section>
+    <section class="elements"></section>
+
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup popup__type_info">
     <div class="popup__container">
-      <form class="popup__form" name="form profile">
+      <form class="popup__form_info" name="form profile">
         <h2 class="popup__title">Редактировать профиль</h2>
-        <input type="text" name="name" value="Жак-Ив Кусто" class="popup__field popup__field_type_name">
-        <input type="text" name="post" value="Исследователь океан" class="popup__field popup__field_type_post">
+        <input type="text" name="name" value placeholder="Жак-Ив Кусто" class="popup__field popup__field_type_name" required>
+        <input type="text" name="post" value placeholder="Исследователь океан" class="popup__field popup__field_type_post" required>
         <button type="submit" class="popup__button">Сохранить</button>
       </form>
-      <button type="button" class="popup__close-button" aria-label="закрыть"></button>
+      <button type="button" class="popup__close-button popup__close-button_type_info" aria-label="закрыть"></button>
     </div>
   </div>
+
+  <div class="popup popup__type_card-add">
+    <div class="popup__container">
+      <form class="popup__form_card" name="form place">
+        <h2 class="popup__title">Новое место</h2>
+        <input type="text" name="cardName" value placeholder="Название" class="popup__field popup__field_type_place" required>
+        <input type="url" name="link" value placeholder="Ссылка на картинку" class="popup__field popup__field_type_link">
+        <button type="submit" class="popup__button">Сохранить</button>
+      </form>
+      <button type="button" class="popup__close-button popup__close-button_type_add" aria-label="закрыть"></button>
+    </div>
+  </div>
+
+  <div  class="popup popup_fullscreen_image">
+    <div class="popup__image-container">
+      <button type="button" class="popup__close-button popup__close-button_type_image" aria-label="закрыть">
+      </button>
+      <figure class="popup__figure">
+        <img src="" class="popup__image" alt="изображение">
+        <figcaption class="popup__image-caption"></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <template class="card-template">
+    <article class="element">
+      <img class="element__image" src="" alt="изображение">
+        <div class="element__rectangle">
+        <h2 class="element__title"></h2>
+        <button type="button" class="element__button" aria-label="лайк"></button>
+      </div>
+      <button class="element__button_action_del" aria-label="удалить карточку">
+      </button>
+    </article>
+  </template>
+  <script src="./script/cards.js"></script>
   <script src="./script/index.js"></script>
 </body>
 
