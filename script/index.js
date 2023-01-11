@@ -71,6 +71,8 @@ function renderCards() {
   })
 }
 
+renderCards();
+
 function addNewCard() {
   const newCard = createCard({
     name: placeInput.value,
@@ -84,8 +86,6 @@ function handleFormSubmitCard(evt) {
   addNewCard();
   closePopup(popupCard);
 }
-
-renderCards();
 
 addButton.addEventListener('click', () => {
   openedPopup(popupInfo);
