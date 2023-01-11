@@ -76,7 +76,6 @@ function addNewCard() {
     name: placeInput.value,
     link: linkInput.value
   });
-  renderCards(newCard);
   cardContainer.prepend(newCard);
 }
 
