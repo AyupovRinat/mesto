@@ -19,13 +19,29 @@ const linkInput = formCard.querySelector('.popup__field_type_link');
 const popupPic = document.querySelector('.popup__image');
 const popupPicName = document.querySelector('.popup__image-caption');
 
+function closePopup(popupElement) {
+  popupElement.classList.remove('popup_opened');
+  document.removeEventListener('keydown', keyHandler);
+  document.removeEventListener('click', closePopupOverlay);
+}
+
+function keyHandler(evt) {
+  if (evt.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  }
+}
+
+function closePopupOverlay(evt) {
+  if (evt.target.classList.contains('popup')) {
+    closePopup(evt.target);
+  }
+}
 
 function openedPopup(popupElement) {
   popupElement.classList.add('popup_opened');
-}
-
-function closePopup(popupElement) {
-  popupElement.classList.remove('popup_opened');
+  document.addEventListener('keydown', keyHandler);
+  document.addEventListener('click', closePopupOverlay);
 }
 
 function handleFormSubmit(evt) {
