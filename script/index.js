@@ -6,8 +6,8 @@ const addCardButton = document.querySelector('.profile__add-button');
 const closeInfoButton = document.querySelector('.popup__close-button_type_info');
 const closeAddButton = document.querySelector('.popup__close-button_type_add');
 const closeImageButton = document.querySelector('.popup__close-button_type_image');
-const formInfo = document.querySelector('.popup__form-info');
-const formCard = document.querySelector('.popup__form-card');
+const formInfo = document.forms['form-profile'];
+const formCard = document.forms['form-place'];
 const nameInput = formInfo.querySelector('.popup__field_type_name');
 const postInput = formInfo.querySelector('.popup__field_type_post');
 const profileName = document.querySelector('.profile__name');
@@ -18,11 +18,12 @@ const placeInput = formCard.querySelector('.popup__field_type_place');
 const linkInput = formCard.querySelector('.popup__field_type_link');
 const popupPic = document.querySelector('.popup__image');
 const popupPicName = document.querySelector('.popup__image-caption');
+const popupButton = document.querySelector('popup__button');
 
 function closePopup(popupElement) {
   popupElement.classList.remove('popup_opened');
   document.removeEventListener('keydown', keyHandler);
-  document.removeEventListener('click', closePopupOverlay);
+  document.removeEventListener('mousedown', closePopupOverlay);
 }
 
 function keyHandler(evt) {
@@ -41,10 +42,10 @@ function closePopupOverlay(evt) {
 function openedPopup(popupElement) {
   popupElement.classList.add('popup_opened');
   document.addEventListener('keydown', keyHandler);
-  document.addEventListener('click', closePopupOverlay);
+  document.addEventListener('mousedown', closePopupOverlay);
 }
 
-function handleFormSubmit(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profilePost.textContent = postInput.value;
@@ -101,9 +102,10 @@ function addNewCard() {
   cardContainer.prepend(newCard);
 }
 
-function handleFormSubmitCard(evt) {
+function handleCardFormSubmit(evt) {
   evt.preventDefault();
   addNewCard();
+  evt.target.reset();
   closePopup(popupCard);
 }
 
@@ -123,12 +125,12 @@ closeInfoButton.addEventListener('click', () => {
 
 closeAddButton.addEventListener('click', () => {
   closePopup(popupCard);
-});
+  });
 
 closeImageButton.addEventListener('click', () => {
   closePopup(popupImage);
 });
 
-formInfo.addEventListener('submit', handleFormSubmit);
+formInfo.addEventListener('submit', handleProfileFormSubmit);
 
-formCard.addEventListener('submit', handleFormSubmitCard);
+formCard.addEventListener('submit', handleCardFormSubmit);

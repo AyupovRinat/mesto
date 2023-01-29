@@ -34,13 +34,13 @@
 
   <div class="popup popup_info">
     <div class="popup__container">
-      <form class="popup__form popup__form-info" name="form profile" novalidate>
-        <h2 class="popup__title">Редактировать профиль"</h2>
+      <form class="popup__form popup__form-info" name="form-profile" novalidate>
+        <h2 class="popup__title">Редактировать профиль</h2>
         <input type="text" name="name" id="name-field" value placeholder="Жак-Ив Кусто" class="popup__field popup__field_type_name" minlength="2" maxlength="40" required>
         <span class="popup__field-error name-field-error"></span>
         <input type="text" name="post" id="post-field" value placeholder="Исследователь океан" class="popup__field popup__field_type_post" minlength="2" maxlength="200" required>
         <span class="popup__field-error post-field-error"></span>
-        <button type="submit" class="popup__button">Сохранить</button>
+        <button type="submit" class="popup__button" disabled>Сохранить</button>
       </form>
       <button type="button" class="popup__close-button popup__close-button_type_info" aria-label="закрыть"></button>
     </div>
@@ -48,13 +48,13 @@
 
   <div class="popup popup_card-add">
     <div class="popup__container">
-      <form class="popup__form popup__form-card" name="form place" novalidate>
+      <form class="popup__form popup__form-card" name="form-place" novalidate>
         <h2 class="popup__title">Новое место</h2>
         <input type="text" name="cardName" id="cardName-field" value placeholder="Название" class="popup__field popup__field_type_place" minlength="2" maxlength="30" required>
         <span class="popup__field-error cardName-field-error">hbhhvhv</span>
         <input type="url" name="link" id="link-field" value placeholder="Ссылка на картинку" class="popup__field popup__field_type_link" required>
         <span class="popup__field-error link-field-error">jbjbjbjb</span>
-        <button type="submit" class="popup__button">Сохранить</button>
+        <button type="submit" class="popup__button" disabled>Сохранить</button>
       </form>
       <button type="button" class="popup__close-button popup__close-button_type_add" aria-label="закрыть"></button>
     </div>
