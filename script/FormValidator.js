@@ -43,16 +43,6 @@ export default class FormValidator {
     });
   }
 
-  _enableValidation = (config) => {
-    const formList = Array.from(document.querySelectorAll(config.formSelector));
-    formList.forEach((formElement) => {
-      formElement.addEventListener('submit', (evt) => {
-        evt.preventDefault();
-      });
-      _setEventListeners(formElement, config);
-    });
-  }
-
   enableValidation = () => this._setEventListeners();
 
   _hasInvalidInput(inputList) {

@@ -1,15 +1,14 @@
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
-import { initialCards, validateConfig, popupInfo, popupCard, popupImage, addButton, addCardButton, closeInfoButton, closeAddButton, closeImageButton, formInfo, formCard, nameInput, postInput, profileName, profilePost, cardContainer, placeInput, linkInput, popupPic, popupPicName } from './utils.js'
-
+import { initialCards, validateConfig, popupInfo, popupCard, popupImage, addButton, addCardButton, closeInfoButton, closeAddButton, closeImageButton, formInfo, formCard, nameInput, postInput, profileName, profilePost, cardContainer, placeInput, linkInput, popupPic, popupPicName, closeButtons } from './utils.js'
 
 function closePopup(popupElement) {
   popupElement.classList.remove('popup_opened');
-  document.removeEventListener('keydown', keyHandler);
+  document.removeEventListener('keydown', handleEscClose);
   document.removeEventListener('mousedown', closePopupOverlay);
 }
 
-function keyHandler(evt) {
+function handleEscClose(evt) {
   if (evt.key === 'Escape') {
     const popupOpened = document.querySelector('.popup_opened');
     closePopup(popupOpened);
@@ -24,7 +23,7 @@ function closePopupOverlay(evt) {
 
 function openedPopup(popupElement) {
   popupElement.classList.add('popup_opened');
-  document.addEventListener('keydown', keyHandler);
+  document.addEventListener('keydown', handleEscClose);
   document.addEventListener('mousedown', closePopupOverlay);
 }
 
@@ -92,16 +91,9 @@ addCardButton.addEventListener('click', () => {
   openedPopup(popupCard);
 });
 
-closeInfoButton.addEventListener('click', () => {
-  closePopup(popupInfo);
-});
-
-closeAddButton.addEventListener('click', () => {
-  closePopup(popupCard);
-});
-
-closeImageButton.addEventListener('click', () => {
-  closePopup(popupImage);
+closeButtons.forEach((button) => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
 });
 
 formInfo.addEventListener('submit', handleProfileFormSubmit);
@@ -109,4 +101,3 @@ formInfo.addEventListener('submit', handleProfileFormSubmit);
 formCard.addEventListener('submit', handleCardFormSubmit);
 
 export { handleOpenPopup };
-

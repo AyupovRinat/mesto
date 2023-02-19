@@ -53,5 +53,6 @@ const placeInput = formCard.querySelector('.popup__field_type_place');
 const linkInput = formCard.querySelector('.popup__field_type_link');
 const popupPic = document.querySelector('.popup__image');
 const popupPicName = document.querySelector('.popup__image-caption');
+const closeButtons = document.querySelectorAll('.popup__close-button');
 
-export { initialCards, validateConfig, popupInfo, popupCard, popupImage, addButton, addCardButton, closeInfoButton, closeAddButton, closeImageButton, formInfo, formCard, nameInput, postInput, profileName, profilePost, cardContainer, placeInput, linkInput, popupPic, popupPicName };
+export { initialCards, validateConfig, popupInfo, popupCard, popupImage, addButton, addCardButton, closeInfoButton, closeAddButton, closeImageButton, formInfo, formCard, nameInput, postInput, profileName, profilePost, cardContainer, placeInput, linkInput, popupPic, popupPicName, closeButtons };
