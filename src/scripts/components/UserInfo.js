@@ -12,8 +12,8 @@ export default class UserInfo {
   }
 
   setUserInfo({ name, post }) {
-    this._nameSelector.textContent = name,
-      this._postSelector.textContent = post
+    this._nameSelector.textContent = name;
+      this._postSelector.textContent = post;
   }
 }
 
