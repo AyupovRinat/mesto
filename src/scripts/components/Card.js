@@ -1,7 +1,5 @@
-import { handleOpenPopup } from './index.js';
-
 export default class Card {
-  constructor(name, link, templateSelector) {
+  constructor(name, link, templateSelector, handleOpenPopup) {
     this._name = name;
     this._link = link;
     this._templateSelector = templateSelector;
@@ -44,3 +42,5 @@ export default class Card {
     return this._element;
   }
 }
+
+
