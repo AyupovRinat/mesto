@@ -1,13 +1,13 @@
-import '../pages/index.css';
+import './index.css';
 
-import Card from './components/Card.js';
-import FormValidator from './components/FormValidator.js';
-import PopupWithForm from './components/PopupWithForm.js';
-import PopupWithImage from './components/PopupWithImage.js';
-import Section from './components/Section.js';
-import UserInfo from './components/UserInfo.js';
+import Card from '../components/Card.js';
+import FormValidator from '../components/FormValidator.js';
+import PopupWithForm from '../components/PopupWithForm.js';
+import PopupWithImage from '../components/PopupWithImage.js';
+import Section from '../components/Section.js';
+import UserInfo from '../components/UserInfo.js';
 
-import { initialCards, validateConfig, addButton, addCardButton, formInfo, formCard, nameInput, postInput } from './utils.js'
+import { initialCards, validateConfig, addButton, addCardButton, formInfo, formCard, nameInput, postInput } from '../utils/utils.js'
 
 //создание попапа с большой картинкой
 const popupBigImage = new PopupWithImage('.popup_big-image');
