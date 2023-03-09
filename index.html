@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="e1792cd1bf55c68d1538.svg" alt="логотип">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img src="ea3ed4e123b02e260887.png" alt="кусто" class="profile__avatar">
+      <div class="profile__info">
+        <div class="profile__container">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="profile__info-button" aria-label="добавить описание"></button>
+        </div>
+        <h2 class="profile__post">Исследователь океана</h2>
+      </div>
+      <button type="button" class="profile__add-button" aria-label="добавить"></button>
+    </section>
+
+    <section class="elements"></section>
+
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+  </footer>
+
+  <div class="popup popup_info">
+    <div class="popup__container">
+      <form class="popup__form popup__form-info" name="form-profile" novalidate>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input type="text" name="name" id="name-field" value placeholder="Жак-Ив Кусто"
+          class="popup__field popup__field_type_name" minlength="2" maxlength="40" required>
+        <span class="popup__field-error name-field-error">vvvvv</span>
+        <input type="text" name="post" id="post-field" value placeholder="Исследователь океан"
+          class="popup__field popup__field_type_post" minlength="2" maxlength="200" required>
+        <span class="popup__field-error post-field-error">vvvv</span>
+        <button type="submit" class="popup__button" disabled>Сохранить</button>
+      </form>
+      <button type="button" class="popup__close-button popup__close-button_type_info" aria-label="закрыть"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_card-add">
+    <div class="popup__container">
+      <form class="popup__form popup__form-card" name="form-place" novalidate>
+        <h2 class="popup__title">Новое место</h2>
+        <input type="text" name="name" id="cardName-field" value placeholder="Название"
+          class="popup__field popup__field_type_place" minlength="2" maxlength="30" required>
+        <span class="popup__field-error cardName-field-error"></span>
+        <input type="url" name="link" id="link-field" value placeholder="Ссылка на картинку"
+          class="popup__field popup__field_type_link" required>
+        <span class="popup__field-error link-field-error"></span>
+        <button type="submit" class="popup__button" disabled>Сохранить</button>
+      </form>
+      <button type="button" class="popup__close-button popup__close-button_type_add" aria-label="закрыть"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_big-image">
+    <div class="popup__image-container">
+      <button type="button" class="popup__close-button popup__close-button_type_image" aria-label="закрыть">
+      </button>
+      <figure class="popup__figure">
+        <img src="#" class="popup__image" alt="#">
+        <figcaption class="popup__image-caption"></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <template class="card-template">
+    <article class="element">
+      <img class="element__image" src="#" alt="#">
+      <div class="element__rectangle">
+        <h2 class="element__title"></h2>
+        <button type="button" class="element__button" aria-label="лайк"></button>
+      </div>
+      <button class="element__button_action_del" aria-label="удалить карточку">
+      </button>
+    </article>
+  </template>
+
+</body>
+
+</html>
