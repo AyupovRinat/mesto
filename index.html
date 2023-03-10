@@ -38,10 +38,10 @@
         <h2 class="popup__title">Редактировать профиль</h2>
         <input type="text" name="name" id="name-field" value placeholder="Жак-Ив Кусто"
           class="popup__field popup__field_type_name" minlength="2" maxlength="40" required>
-        <span class="popup__field-error name-field-error">vvvvv</span>
+        <span class="popup__field-error name-field-error"></span>
         <input type="text" name="post" id="post-field" value placeholder="Исследователь океан"
           class="popup__field popup__field_type_post" minlength="2" maxlength="200" required>
-        <span class="popup__field-error post-field-error">vvvv</span>
+        <span class="popup__field-error post-field-error"></span>
         <button type="submit" class="popup__button" disabled>Сохранить</button>
       </form>
       <button type="button" class="popup__close-button popup__close-button_type_info" aria-label="закрыть"></button>
@@ -77,11 +77,11 @@
 
   <div class="popup popup_avatar">
     <div class="popup__container">
-      <form class="popup__form popup__form-avatar" name="form-ava" novalidate>
+      <form class="popup__form popup__form-avatar" name="form-avatar" novalidate>
         <h2 class="popup__title">Обновить аватар</h2>
-        <input type="url" name="link" id="link-field" value placeholder="Ссылка на картинку"
+        <input type="url" name="avatar" id="avatar-field" value placeholder="Ссылка на картинку"
           class="popup__field popup__field_type_link" required>
-        <span class="popup__field-error link-fiel <h2 class="popup__title">Обновить аватар</hd-error"></span>
+        <span class="popup__field-error link-field-error popup__field-error_active"></span>
         <button type="submit" class="popup__button" disabled>Сохранить</button>
       </form>
       <button type="button" class="popup__close-button popup__close-button_type_add" aria-label="закрыть"></button>
