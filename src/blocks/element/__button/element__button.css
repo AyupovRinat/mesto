@@ -1,6 +1,5 @@
 .element__button {
-  margin: 0;
-  margin-right: 5px;
+  margin: 0 5px 3px 0;
   width: 22px;
   height: 19px;
   cursor: pointer;

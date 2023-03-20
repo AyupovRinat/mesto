@@ -1,7 +1,8 @@
 export default class UserInfo {
-  constructor({ nameSelector, postSelector }) {
+  constructor({ nameSelector, postSelector, avatarSelector }) {
     this._nameSelector = document.querySelector(nameSelector);
     this._postSelector = document.querySelector(postSelector);
+    this._avatarSelector = document.querySelector(avatarSelector);
   }
 
   getUserInfo() {
@@ -11,10 +12,16 @@ export default class UserInfo {
     };
   }
 
-  setUserInfo({ name, post }) {
+  setUserInfo({ name, about }) {
     this._nameSelector.textContent = name;
-      this._postSelector.textContent = post;
+    this._postSelector.textContent = about;
   }
+
+getUserId() {
+  return this._id;
 }
 
-
+setUserAvatar({ avatar }) {
+  this._avatarSelector.src = avatar;
+}
+}

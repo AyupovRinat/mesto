@@ -32,7 +32,7 @@ export default class FormValidator {
     this._toggleButtonState();
     this._formElement.addEventListener('reset', () => {
       setTimeout(() => {
-        this._toggleButtonState();
+        this._resetValidation();
       }, 0);
     });
     this._inputList.forEach((inputElement) => {
@@ -60,5 +60,12 @@ export default class FormValidator {
       this._buttonElement.classList.remove(this._config.inactiveButtonClass);
     };
   }
-}
 
+  _resetValidation = () => {
+    this._toggleButtonState();
+    this._inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement);
+    })
+  }
+
+}
