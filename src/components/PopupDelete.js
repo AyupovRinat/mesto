@@ -3,8 +3,7 @@ import Popup from './Popup.js';
 export default class PopupDelete extends Popup {
   constructor(popupSelector) {
     super(popupSelector);
-    this._popupForm = this._popupElement.querySelector('.popup__form');
-    this._popupButton = this._popupForm.querySelector('.popup__button');
+    this._popupButton = this._popupElement.querySelector('.popup__button');
     this._popupButtonTextContent = this._popupButton.textContent
   }
 
@@ -15,7 +14,7 @@ export default class PopupDelete extends Popup {
   setEventListeners() {
     super.setEventListeners();
     this._popupButton.addEventListener('click', () => {
-      this._handleSubmit;
+      this._handleSubmit();
     })
   }
 
@@ -27,6 +26,4 @@ export default class PopupDelete extends Popup {
     }
   }
 }
-
-
 

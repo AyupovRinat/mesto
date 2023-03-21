@@ -17,10 +17,6 @@ export default class UserInfo {
     this._postSelector.textContent = about;
   }
 
-getUserId() {
-  return this._id;
-}
-
 setUserAvatar({ avatar }) {
   this._avatarSelector.src = avatar;
 }

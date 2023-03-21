@@ -136,6 +136,8 @@ const createCard = (data) => {
     },
     userId,
     handleTrashButtonDelete: () => {
+      //Секунду подумаю
+      deletePopup.open();
       deletePopup.setSubmit(() => {
         deletePopup.renderLoadingDelete(true);
         api.deleteCard(data._id)
@@ -150,10 +152,6 @@ const createCard = (data) => {
             deletePopup.renderLoadingDelete(false);
           })
       })
-      deletePopup.open();
-      // console.log(api.deleteCard(data._id));
-      //console.log(card.deleteCard());
-      // console.log(deletePopup.close());
     },
     handleSetLike: () => {
       api.setlike(data._id)
